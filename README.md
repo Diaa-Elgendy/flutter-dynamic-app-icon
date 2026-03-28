@@ -38,11 +38,6 @@ flutter pub get
 flutter run
 ```
 
-> **Android first-run:** If this is a fresh clone or you changed the manifest, do a clean install:
-> ```bash
-> adb uninstall com.delgendy.com.flutter_dynamic_app_icon && flutter run
-> ```
-
 ---
 
 ## How It Works
