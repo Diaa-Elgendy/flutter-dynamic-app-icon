@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
+import 'services/dynamic_icon_service.dart';
+
 void main() {
   runApp(const MyApp());
 }
@@ -40,9 +42,10 @@ class _DynamicIconPageState extends State<DynamicIconPage> {
   }
 
   Future<void> _loadCurrentIcon() async {
+    final iconName = await DynamicIconService.getCurrentIcon();
     if (mounted) {
       setState(() {
-        _currentIcon ='Day';
+        _currentIcon = iconName == 'NightIcon' ? 'Night' : 'Day';
       });
     }
   }
@@ -54,8 +57,10 @@ class _DynamicIconPageState extends State<DynamicIconPage> {
 
     try {
       if (isNight) {
+        await DynamicIconService.setNightIcon();
         _currentIcon = 'Night';
       } else {
+        await DynamicIconService.setDayIcon();
         _currentIcon = 'Day';
       }
     } on PlatformException catch (e) {
