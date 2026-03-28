@@ -1,4 +1,6 @@
-# Flutter Dynamic App Icon
+# Dynamic App Icon in Flutter
+
+![Cover](assets/cover_photo.png)
 
 A sample Flutter app that changes the launcher icon at runtime on **Android** and **iOS** using Platform Method Channels — no third-party packages.
 
@@ -12,13 +14,11 @@ Two icons are included:
 
 ### Android
 
-<!-- Record a screen capture and replace the line below -->
-![Android Demo](docs/android_demo.gif)
+![Android Demo](assets/android_demo.gif)
 
 ### iOS
 
-<!-- Record a screen capture and replace the line below -->
-![iOS Demo](docs/ios_demo.gif)
+![iOS Demo](assets/ios_demo.gif)
 
 ---
 
@@ -59,7 +59,7 @@ flutter run
 
 > iOS always shows a system confirmation dialog when the icon changes — this is an OS requirement and cannot be suppressed.
 
-### Known limitations
+### Known Limitations
 - **Android:** If the Night icon is active and you run `flutter run`, it will fail because `.DayIcon` is disabled. Fix: tap **Day Icon** inside the app first, then re-run.
 - **Simulator:** This feature may not work on simulators. Testing on a **real device** is recommended for both Android and iOS.
 
