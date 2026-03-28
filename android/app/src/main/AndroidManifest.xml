@@ -1,6 +1,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android">
    <application
-       android:label="flutter_dynamic_app_icon"
+       android:label="Dynamic App Icon"
        android:name="${applicationName}"
        android:icon="@mipmap/ic_launcher">
        <!-- android:enabled="false" hides this activity from the launcher and from
@@ -31,7 +31,7 @@
            android:enabled="true"
            android:exported="true"
            android:icon="@mipmap/ic_launcher"
-           android:label="flutter_dynamic_app_icon"
+           android:label="Dynamic App Icon"
            android:targetActivity=".MainActivity">
            <intent-filter>
                <action android:name="android.intent.action.MAIN"/>
@@ -45,7 +45,7 @@
            android:enabled="false"
            android:exported="true"
            android:icon="@mipmap/ic_launcher_night"
-           android:label="flutter_dynamic_app_icon"
+           android:label="Dynamic App Icon"
            android:targetActivity=".MainActivity">
            <intent-filter>
                <action android:name="android.intent.action.MAIN"/>
