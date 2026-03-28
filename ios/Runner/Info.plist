@@ -45,5 +45,18 @@
 	<true/>
 	<key>UIApplicationSupportsIndirectInputEvents</key>
 	<true/>
+	<key>CFBundleIcons</key>
+	<dict>
+		<key>CFBundleAlternateIcons</key>
+		<dict>
+			<key>NightIcon</key>
+			<dict>
+				<key>CFBundleIconFiles</key>
+				<array>
+					<string>NightIcon</string>
+				</array>
+			</dict>
+		</dict>
+	</dict>
 </dict>
 </plist>
