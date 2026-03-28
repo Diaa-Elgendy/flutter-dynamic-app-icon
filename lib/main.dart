@@ -14,7 +14,7 @@ class MyApp extends StatelessWidget {
       title: 'Dynamic App Icon',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.blue),
+        colorScheme: ColorScheme.fromSeed(seedColor: Colors.amber),
         useMaterial3: true,
       ),
       home: const DynamicIconPage(),
@@ -30,7 +30,7 @@ class DynamicIconPage extends StatefulWidget {
 }
 
 class _DynamicIconPageState extends State<DynamicIconPage> {
-  String _currentIcon = 'Default';
+  String _currentIcon = 'Day';
   bool _isLoading = false;
 
   @override
@@ -42,21 +42,21 @@ class _DynamicIconPageState extends State<DynamicIconPage> {
   Future<void> _loadCurrentIcon() async {
     if (mounted) {
       setState(() {
-        _currentIcon = 'Default';
+        _currentIcon ='Day';
       });
     }
   }
 
-  Future<void> _changeIcon({required bool isOffer}) async {
+  Future<void> _changeIcon({required bool isNight}) async {
     if (_isLoading) return;
 
     setState(() => _isLoading = true);
 
     try {
-      if (isOffer) {
-        _currentIcon = 'Offer';
+      if (isNight) {
+        _currentIcon = 'Night';
       } else {
-        _currentIcon = 'Default';
+        _currentIcon = 'Day';
       }
     } on PlatformException catch (e) {
       if (mounted) {
@@ -104,21 +104,21 @@ class _DynamicIconPageState extends State<DynamicIconPage> {
             ),
             const SizedBox(height: 32),
             _IconOptionCard(
-              title: 'Default Icon',
-              subtitle: 'The standard app icon',
-              assetPath: 'assets/icons/default_icon.png',
-              isSelected: _currentIcon == 'Default',
-              accentColor: Colors.blue,
-              onTap: () => _changeIcon(isOffer: false),
+              title: 'Day Icon',
+              subtitle: 'Bright icon for daytime',
+              assetPath: 'assets/icons/day_icon.png',
+              isSelected: _currentIcon == 'Day',
+              accentColor: Colors.amber,
+              onTap: () => _changeIcon(isNight: false),
             ),
             const SizedBox(height: 16),
             _IconOptionCard(
-              title: 'Offer Icon',
-              subtitle: 'Special icon for offer days',
-              assetPath: 'assets/icons/offer_icon.png',
-              isSelected: _currentIcon == 'Offer',
-              accentColor: Colors.orange,
-              onTap: () => _changeIcon(isOffer: true),
+              title: 'Night Icon',
+              subtitle: 'Dark icon for night mode',
+              assetPath: 'assets/icons/night_icon.png',
+              isSelected: _currentIcon == 'Night',
+              accentColor: Colors.indigo,
+              onTap: () => _changeIcon(isNight: true),
             ),
             const Spacer(),
             Container(
