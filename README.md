@@ -12,13 +12,9 @@ Two icons are included:
 
 ## Demo
 
-### Android
-
-![Android Demo](assets/android_demo.gif)
-
-### iOS
-
-![iOS Demo](assets/ios_demo.gif)
+| Android | iOS |
+|:---:|:---:|
+| ![Android Demo](assets/android_demo.gif) | ![iOS Demo](assets/ios_demo.gif) |
 
 ---
 
