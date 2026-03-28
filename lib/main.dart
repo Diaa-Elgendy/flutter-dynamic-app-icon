@@ -125,29 +125,6 @@ class _DynamicIconPageState extends State<DynamicIconPage> {
               accentColor: Colors.indigo,
               onTap: () => _changeIcon(isNight: true),
             ),
-            const Spacer(),
-            Container(
-              padding: const EdgeInsets.all(16),
-              decoration: BoxDecoration(
-                color: theme.colorScheme.surfaceContainerHighest.withValues(
-                  alpha: 0.5,
-                ),
-                borderRadius: BorderRadius.circular(12),
-              ),
-              child: Row(
-                children: [
-                  Icon(Icons.info_outline, color: theme.colorScheme.primary),
-                  const SizedBox(width: 12),
-                  Expanded(
-                    child: Text(
-                      'On Android, the icon changes on the home screen immediately. '
-                      'On iOS, a system confirmation will appear.',
-                      style: theme.textTheme.bodySmall,
-                    ),
-                  ),
-                ],
-              ),
-            ),
           ],
         ),
       ),
